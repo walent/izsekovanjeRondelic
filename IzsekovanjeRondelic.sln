@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IzsekovanjeRondelic", "IzsekovanjeRondelic\IzsekovanjeRondelic.csproj", "{C7852B99-1230-460F-9954-5E627FE8ECB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{3CF70D34-F08B-4279-868A-D89184287736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C7852B99-1230-460F-9954-5E627FE8ECB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7852B99-1230-460F-9954-5E627FE8ECB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7852B99-1230-460F-9954-5E627FE8ECB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF70D34-F08B-4279-868A-D89184287736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF70D34-F08B-4279-868A-D89184287736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF70D34-F08B-4279-868A-D89184287736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF70D34-F08B-4279-868A-D89184287736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
