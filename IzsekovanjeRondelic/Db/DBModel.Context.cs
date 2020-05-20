@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IzsekovanjeRondelic
+namespace IzsekovanjeRondelic.Db
 {
     using System;
     using System.Data.Entity;
