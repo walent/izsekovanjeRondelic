@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IzsekovanjeRondelic", "Izse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{3CF70D34-F08B-4279-868A-D89184287736}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST", "REST\REST.csproj", "{8F541D6C-A1F5-4DE6-B8DA-45B84EE9B233}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3CF70D34-F08B-4279-868A-D89184287736}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CF70D34-F08B-4279-868A-D89184287736}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CF70D34-F08B-4279-868A-D89184287736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F541D6C-A1F5-4DE6-B8DA-45B84EE9B233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F541D6C-A1F5-4DE6-B8DA-45B84EE9B233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F541D6C-A1F5-4DE6-B8DA-45B84EE9B233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F541D6C-A1F5-4DE6-B8DA-45B84EE9B233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

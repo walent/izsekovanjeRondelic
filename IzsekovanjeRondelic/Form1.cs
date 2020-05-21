@@ -11,8 +11,6 @@ namespace IzsekovanjeRondelic
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         Slug slugObject = new Slug();
         CircleInRectangle cir = new CircleInRectangle();
-
-
         decimal result = 0;
         double tempLenght = 0;
         double tempWidth = 0;
@@ -36,6 +34,30 @@ namespace IzsekovanjeRondelic
                 tempSpace = Convert.ToDouble(spaceTxt.Text);
                 result = Convert.ToDecimal(cir.numberOfSlugs(tempLenght, tempWidth, tempradious, tempSpace));
                 labResult.Text = result.ToString();
+                slugObject.lenght = Convert.ToDecimal(tempLenght);
+                slugObject.width = Convert.ToDecimal(tempWidth);
+                slugObject.radious = Convert.ToDecimal(tempradious);
+                slugObject.space = Convert.ToDecimal(tempSpace);
+                slugObject.result = result;
+
+                try
+                {
+                    using (DBEntities db = new DBEntities())
+                    {
+                        db.Slugs.Add(slugObject);
+                        db.SaveChanges();
+                        log.Info("Dodan nov zapis v Bazo. " + slugObject.ToString());
+                    }
+
+                    getSlugsList();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Napaka pri branju iz baze");
+                    log.Error("Napaka pri branju iz baze:");
+                }
+                clearTxt();
+
             }
             catch (Exception)
             {
@@ -43,29 +65,6 @@ namespace IzsekovanjeRondelic
                 log.Error("Vnos parametrov v nepravilnem formatu");
             }
 
-            slugObject.lenght = Convert.ToDecimal(tempLenght);
-            slugObject.width = Convert.ToDecimal(tempWidth);
-            slugObject.radious = Convert.ToDecimal(tempradious);
-            slugObject.space = Convert.ToDecimal(tempSpace);
-            slugObject.result = result;
-
-            try
-            {
-                using (DBEntities db = new DBEntities())
-                {
-                    db.Slugs.Add(slugObject);
-                    db.SaveChanges();
-                    log.Info("Dodan nov zapis v Bazo. " + slugObject.ToString());
-                }
-
-                getSlugsList();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Napaka pri branju iz baze");
-                log.Error("Napaka pri branju iz baze:");
-            }
-            // clearTxt();
         }
 
         // Pridobivanje zapisov iz baze
@@ -75,13 +74,13 @@ namespace IzsekovanjeRondelic
             {
                 using (DBEntities db = new DBEntities())
                 {
-                    dataGridView1.DataSource = db.Slugs.ToList<Slug>();
+                    dataGridView1.DataSource = db.Slugs.OrderByDescending(x => x.id ).ToList<Slug>();
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Napaka pri branju iz baze");
-                log.Error("Napaka pri branju iz baze:" + e);
+                MessageBox.Show("Napaka pri pridobivanju podatkov iz baze");
+                log.Error("Napaka pri pridobivanju podatkov iz baze:" + e);
             }
 
         }
@@ -102,7 +101,7 @@ namespace IzsekovanjeRondelic
                         db.SaveChanges();
                         getSlugsList();
                         clearTxt();
-                        log.Info("Izbrisan zapis :" + slugObject.id);
+                        log.Info("Izbrisan zapis :" + slugObject.ToString());
                     }
                 }
             }
@@ -124,7 +123,7 @@ namespace IzsekovanjeRondelic
             widthTxt.Text = "";
             radiousTxt.Text = "";
             spaceTxt.Text = "";
-            labResult.Text = "";
+            //labResult.Text = "";
 
         }
 

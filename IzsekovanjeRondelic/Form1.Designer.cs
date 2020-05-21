@@ -38,6 +38,12 @@
             this.radiousTxt = new System.Windows.Forms.TextBox();
             this.spaceTxt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.raious = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.space = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labResult = new System.Windows.Forms.Label();
             this.resetTextBtn = new System.Windows.Forms.Button();
             this.delateEntryBtn = new System.Windows.Forms.Button();
@@ -46,12 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.raious = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.space = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,6 +150,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(616, 341);
             this.dataGridView1.TabIndex = 6;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.Width = 50;
+            // 
+            // resultt
+            // 
+            this.resultt.DataPropertyName = "result";
+            this.resultt.HeaderText = "Rezultat";
+            this.resultt.Name = "resultt";
+            this.resultt.Width = 70;
+            // 
+            // lenght
+            // 
+            this.lenght.DataPropertyName = "lenght";
+            this.lenght.HeaderText = "Dolžina";
+            this.lenght.Name = "lenght";
+            // 
+            // width
+            // 
+            this.width.DataPropertyName = "width";
+            this.width.HeaderText = "Širina";
+            this.width.Name = "width";
+            // 
+            // raious
+            // 
+            this.raious.DataPropertyName = "radious";
+            this.raious.HeaderText = "Polmer";
+            this.raious.Name = "raious";
+            this.raious.Width = 70;
+            // 
+            // space
+            // 
+            this.space.DataPropertyName = "space";
+            this.space.HeaderText = "Odmik";
+            this.space.Name = "space";
+            this.space.Width = 70;
+            // 
             // labResult
             // 
             this.labResult.AutoSize = true;
@@ -225,46 +265,6 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Maximalno število rondelic";
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.Width = 50;
-            // 
-            // resultt
-            // 
-            this.resultt.DataPropertyName = "result";
-            this.resultt.HeaderText = "Rezultat";
-            this.resultt.Name = "resultt";
-            this.resultt.Width = 70;
-            // 
-            // lenght
-            // 
-            this.lenght.DataPropertyName = "lenght";
-            this.lenght.HeaderText = "Dolžina";
-            this.lenght.Name = "lenght";
-            // 
-            // width
-            // 
-            this.width.DataPropertyName = "width";
-            this.width.HeaderText = "Širina";
-            this.width.Name = "width";
-            // 
-            // raious
-            // 
-            this.raious.DataPropertyName = "radious";
-            this.raious.HeaderText = "Polmer";
-            this.raious.Name = "raious";
-            this.raious.Width = 70;
-            // 
-            // space
-            // 
-            this.space.DataPropertyName = "space";
-            this.space.HeaderText = "Odmik";
-            this.space.Name = "space";
-            this.space.Width = 70;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,7 +289,7 @@
             this.Controls.Add(this.labLenght);
             this.Controls.Add(this.calculateBtn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Izračun rondelic";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

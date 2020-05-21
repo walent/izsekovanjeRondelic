@@ -9,5 +9,11 @@ namespace IzsekovanjeRondelic.Db
         public decimal radious { get; set; }
         public decimal space { get; set; }
         public decimal result { get; set; }
+
+
+        public override string ToString()
+        {
+            return "Nov izraèun : " + lenght + " " + width + " " + radious + " " + space + " rezultat: " + result;
+        }
     }
 }
